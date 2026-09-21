@@ -5,9 +5,11 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  When the game first ran it was pretty much broken and only allowed for one full play before it froze. It would also give inccorect hints and could not change difficulty
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
-
+    1. Hint was inverted so there was no way of knowing if you were close to winning
+    2. The game would never reset after loosing making it impossible to replay
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
@@ -69,11 +71,19 @@ box
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 
+Every click or input reruns the whole script from top to bottom. Normal variables would reset each time, so anything that needs to persist (score, attempts, secret number) has to live in st.session_state instead.
+
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+
+  I would say that one habit I hope to reuse is that checking out the logic first rather than throwing it into the AI first to verify that everyhting makes sense before making changes
 - What is one thing you would do differently next time you work with AI on a coding task?
+
+  Giving it better prompts and learning how to fine tune wording so that it can accuratley pinpoint where issues are at in the code.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  I would say that it is very impressive but some form of human input is required to make sure everything is correct. After it is trained on humand data and humans make mistakes all the time.
